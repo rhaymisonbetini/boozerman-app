@@ -1,0 +1,66 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button fill="clear" strong="true" color="dark">Cadastro</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-item lines="none">
+    <ion-label color="dark">
+      <span class="title">Login</span>
+      <p class="ion-text-wrap ion-text-justify">
+        Realize o login para poder pedir sua gelada!
+      </p>
+    </ion-label>
+  </ion-item>
+</ion-header>
+
+<ion-content [fullscreen]="true" color="warning">
+
+  <ion-list lines="none">
+    <ion-item-group class="ion-padding">
+      <form [formGroup]="loginForm">
+        <ion-item color="light" class="formuser ion-margin-top">
+          <ion-input class="ion-margin-horizontal" formControlName="email" type="email" placeholder="E-mail">
+          </ion-input>
+        </ion-item>
+        <ion-text class="ion-margin-horizontal" *ngIf="!loginForm.get('email').valid &&  loginForm.get('email').touched"
+          color="danger" size="small">
+          E-mail obrigatório
+        </ion-text>
+        <ion-item color="light" class="formuser ion-margin-bottom">
+          <ion-input class="ion-margin-horizontal" formControlName="password" type="password" placeholder="Senha">
+          </ion-input>
+        </ion-item>
+        <ion-text class="ion-margin-horizontal"
+          *ngIf="!loginForm.get('password').valid &&  loginForm.get('password').touched" color="danger">
+          Senha obrigatória
+        </ion-text>
+        <p class="ion-text-right">
+          <ion-text>Esqueceu sua senha?</ion-text>
+        </p>
+        <ion-button size="large" expand="block" shape="round" color="dark" (click)="login()"
+          [disabled]="!loginForm.valid">
+          login
+        </ion-button>
+      </form>
+    </ion-item-group>
+
+    <ion-item-group class="ion-padding group">
+      <ion-item>
+        <ion-icon slot="start" name="logo-google" color="danger"></ion-icon>
+        <ion-label>Continuar com o Google</ion-label>
+        <ion-icon slod="end" name="arrow-forward-outline"></ion-icon>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" name="logo-facebook" color="primary"></ion-icon>
+        <ion-label>Continuar com o facebook</ion-label>
+        <ion-icon slod="end" name="arrow-forward-outline"></ion-icon>
+      </ion-item>
+    </ion-item-group>
+
+  </ion-list>
+
+</ion-content>
