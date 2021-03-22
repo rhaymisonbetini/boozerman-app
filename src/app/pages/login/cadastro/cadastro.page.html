@@ -1,9 +1,53 @@
-<ion-header>
+<ion-header class="ion-no-border">
   <ion-toolbar>
-    <ion-title>cadastro</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button fill="clear" strong="true" color="dark" (click)="login()">Login</ion-button>
+    </ion-buttons>
   </ion-toolbar>
+  <ion-item lines="none">
+    <ion-label color="dark">
+      <span class="title">Cadastro</span>
+      <p class="ion-text-wrap ion-text-justify">
+        Realize o seu cadastro para poder pedir a sua gelada!
+      </p>
+    </ion-label>
+  </ion-item>
 </ion-header>
 
-<ion-content>
+<ion-content [fullscreen]="true" color="warning">
+
+  <ion-list lines="none">
+    <div class="avatar">
+      <img src="../../../../assets/images/logo.jpg" alt="">
+    </div>
+    <ion-item-group>
+      <ion-item color="light" class="ion-margin-top">
+        <ion-label class="ion-margin-horizontal" position="stacked">Escolha seu Boozername</ion-label>
+        <ion-input type="text">
+        </ion-input>
+      </ion-item>
+      <ion-item color="light" class="ion-margin-top">
+        <ion-label class="ion-margin-horizontal" position="stacked">E-mail</ion-label>
+        <ion-input class="ion-margin-horizontal" type="email">
+        </ion-input>
+      </ion-item>
+      <ion-item color="light" class="ion-margin-top">
+        <ion-label class="ion-margin-horizontal" position="stacked">Senha</ion-label>
+        <ion-input class="ion-margin-horizontal" type="password">
+        </ion-input>
+      </ion-item>
+      <ion-item color="light" class="ion-margin-top">
+        <ion-label class="ion-margin-horizontal" position="stacked">Confirme sua senha</ion-label>
+        <ion-input class="ion-margin-horizontal" type="password">
+        </ion-input>
+      </ion-item>
+      <ion-button class="ion-margin-top" size="large" expand="block" shape="round" color="dark">
+        Cadastrar
+      </ion-button>
+    </ion-item-group>
+  </ion-list>
 
 </ion-content>

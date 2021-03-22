@@ -22,10 +22,6 @@ ion-menu.md ion-note {
   padding-left: 10px;
 }
 
-ion-menu.md ion-list#inbox-list {
-  border-bottom: 1px solid var(--ion-color-step-150, #d7d8da);
-}
-
 ion-menu.md ion-list#inbox-list ion-list-header {
   font-size: 22px;
   font-weight: 600;
@@ -50,11 +46,11 @@ ion-menu.md ion-item {
 }
 
 ion-menu.md ion-item.selected {
-  --background: rgba(var(--ion-color-primary-rgb), 0.14);
+  --background: var(--ion-color-ligth);
 }
 
 ion-menu.md ion-item.selected ion-icon {
-  color: var(--ion-color-primary);
+  color: var(--ion-color-medium);
 }
 
 ion-menu.md ion-item ion-icon {
@@ -116,4 +112,97 @@ ion-note {
 
 ion-item.selected {
   --color: var(--ion-color-primary);
+}
+
+.m-l-icons {
+  margin-left: 5px !important;
+}
+
+ion-menu {
+  --ion-background-color: var(--ion-color-warning);
+  --ion-text-color: var(--ion-color-primary-contrast);
+
+  ion-toolbar {
+    --background: var(--ion-color-primary);
+  }
+
+  ion-list {
+    /* optional, but it needs when you use gradient as a background color.*/
+    background: transparent;
+  }
+}
+
+ion-item {
+
+  color: white !important;
+  font-size: 18px;
+
+  ion-icon {
+    color: white !important;
+    margin-right: 5px;
+
+  }
+
+  ion-label {
+    color: #242424 !important;
+  }
+}
+
+ion-item.ios {
+  border-bottom: none !important;
+}
+
+ion-list-header {
+  color: #242424 !important;
+
+}
+
+ion-note {
+  color: #242424 !important;
+
+}
+
+.menu-header-bg {
+  height: 240px;
+  width: 350px;
+  background: white;
+  background: linear-gradient(90deg, var(white) 0%, var(--ion-color-dark) 0%);
+  transform: rotate(-15deg);
+  border-radius: 10px 10px 10px 50px;
+  margin-left: -18px;
+  margin-top: -70px;
+  margin-bottom: 60px;
+}
+
+.header-content {
+  position: absolute;
+  top: 0px;
+  left: 15px;
+  display: flex;
+  align-items: center;  
+  font-size: 14px;
+
+  img {
+    width: 60%;
+    height: auto;
+  }
+
+  menu-items {
+    margin: 0px;
+
+    ion-icon {
+      margin-right: 20px;
+      color: var(--ion-color-primary);
+    }
+
+    ion-item {
+      padding-left: 20px;
+      margin-bottom: 10px;
+    }
+
+    .active {
+      border-left: 5px solid;
+      padding-left: 15px;
+    }
+  }
 }

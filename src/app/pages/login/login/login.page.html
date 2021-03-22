@@ -4,7 +4,7 @@
       <ion-back-button></ion-back-button>
     </ion-buttons>
     <ion-buttons slot="end">
-      <ion-button fill="clear" strong="true" color="dark">Cadastro</ion-button>
+      <ion-button fill="clear" strong="true" color="dark" (click)="register()">Cadastro</ion-button>
     </ion-buttons>
   </ion-toolbar>
   <ion-item lines="none">
@@ -41,8 +41,7 @@
         <p class="ion-text-right">
           <ion-text>Esqueceu sua senha?</ion-text>
         </p>
-        <ion-button size="large" expand="block" shape="round" color="dark" (click)="login()"
-          [disabled]="!loginForm.valid">
+        <ion-button size="large" expand="block" shape="round" color="dark" (click)="login()">
           login
         </ion-button>
       </form>

@@ -1,9 +1,39 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>home</ion-title>
+  <ion-toolbar color="warning">
+    <ion-buttons slot="start" color="light">
+      <ion-menu-button color="light"></ion-menu-button>
+    </ion-buttons>
+    <ion-title color="light">
+      Boozerman
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content [fullscreen]="true">
+  <h6 class="ion-padding-horizontal">
+    Destaques
+  </h6>
+  <div class="scrolling-wrapper ion-padding-horizontal">
+    <div class="card" *ngFor="let emphasi of emphasis; index as i">
+      <img [src]="emphasi.photo">
+      <span>{{emphasi.name}}</span>
+    </div>
+  </div>
+  <br />
+  <h6 class="ion-padding-horizontal">
+    Novas cervejarias
+  </h6>
+  <div class="scrolling-wrapper ion-padding-horizontal">
+    <div class="partner" *ngFor="let bar of bars; index as i">
+      <img [src]="bar.photo">
+    </div>
+  </div>
+  <br />
+  <h6 class="ion-padding-horizontal">
+    Locais próximos
+  </h6>
+  <div id="map" class="ion-padding-horizontal">
+
+  </div>
 
 </ion-content>

@@ -1,5 +1,7 @@
 {
   "name": "drinkDelivery",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
