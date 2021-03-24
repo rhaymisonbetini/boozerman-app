@@ -25,6 +25,7 @@
     "@ionic/angular": "^5.5.2",
     "@types/leaflet": "^1.7.0",
     "cordova-android": "9.0.0",
+    "ionic5-star-rating": "https://github.com/JeongJun-Lee/ionic5-star-rating/tarball/master",
     "leaflet": "^1.7.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",

@@ -15,6 +15,16 @@ ion-content {
         font-weight: bold;
     }
 
+    span {
+        display: block;
+        font-size: 12px;
+        text-align: center;
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-weight: bold;
+    }
+    
     .scrolling-wrapper {
         overflow-x: scroll;
         overflow-y: hidden;
@@ -33,16 +43,6 @@ ion-content {
                 margin: 5px;
                 border: 2px solid white;
                 box-shadow: 0px 0px 0px 2px var(--ion-color-warning);
-            }
-
-            span {
-                display: block;
-                font-size: 12px;
-                text-align: center;
-                max-width: 100%;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                font-weight: bold;
             }
         }
 

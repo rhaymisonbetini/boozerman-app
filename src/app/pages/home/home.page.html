@@ -4,7 +4,7 @@
       <ion-menu-button color="light"></ion-menu-button>
     </ion-buttons>
     <ion-title color="light">
-      Boozerman
+      Boozeman
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -14,7 +14,7 @@
     Destaques
   </h6>
   <div class="scrolling-wrapper ion-padding-horizontal">
-    <div class="card" *ngFor="let emphasi of emphasis; index as i">
+    <div class="card" *ngFor="let emphasi of emphasis; index as i" (click)="profile()">
       <img [src]="emphasi.photo">
       <span>{{emphasi.name}}</span>
     </div>
@@ -26,6 +26,7 @@
   <div class="scrolling-wrapper ion-padding-horizontal">
     <div class="partner" *ngFor="let bar of bars; index as i">
       <img [src]="bar.photo">
+      <span>{{bar.name}}</span>
     </div>
   </div>
   <br />
@@ -34,6 +35,16 @@
   </h6>
   <div id="map" class="ion-padding-horizontal">
 
+  </div>
+  <br />
+  <h6 class="ion-padding-horizontal">
+    Ultimos pedidos
+  </h6>
+  <div class="scrolling-wrapper ion-padding-horizontal">
+    <div class="partner" *ngFor="let last of lasts; index as i">
+      <img [src]="last.photo">
+      <span>{{last.name}}</span>
+    </div>
   </div>
 
 </ion-content>

@@ -1,0 +1,52 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-item lines="none">
+    <ion-label color="dark">
+      <span class="title">Bar do Agiota</span>
+      <p class="ion-text-wrap ion-text-justify">
+        Fiado só quando One Piece acabar!
+      </p>
+    </ion-label>
+  </ion-item>
+</ion-header>
+
+<ion-content>
+
+  <div id="banner">
+    <div class="img">
+
+    </div>
+    <div class="rating">
+      <ion-icon name="star" color="warning"></ion-icon>
+      <ion-icon name="star" color="warning"></ion-icon>
+      <ion-icon name="star" color="warning"></ion-icon>
+      <ion-icon name="star" color="warning"></ion-icon>
+      <ion-icon name="star" colo="secondary"></ion-icon>
+    </div>
+
+  </div>
+
+
+  <ion-list class="ion-padding-horizontal" lines="none">
+    <ion-list-header>
+      Recent Conversations
+    </ion-list-header>
+    <ng-container *ngIf="itens && itens.length > 0">
+      <ion-item *ngFor="let item of itens; index as i">
+        <ion-avatar slot="start">
+          <img [src]="item.photo">
+        </ion-avatar>
+        <ion-label>
+          <h2>{{item.name}}</h2>
+          <p>{{item.value}}</p>
+        </ion-label>
+      </ion-item>
+    </ng-container>
+  </ion-list>
+
+
+</ion-content>

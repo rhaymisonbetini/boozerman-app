@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import * as L from "leaflet";
 import { Geolocation } from '@ionic-native/geolocation/ngx';
-import { Simulate, Destaque, Bar } from 'src/database/simulate';
+import { Simulate, Destaque, Bar, Last } from 'src/database/simulate';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -26,8 +27,10 @@ export class HomePage implements OnInit {
   //fakedatas
   public emphasis: Array<Destaque>;
   public bars: Array<Bar>;
+  public lasts: Array<Last>;
 
   constructor(
+    private router: Router,
     private geolocation: Geolocation,
     private simulate: Simulate
   ) { }
@@ -35,6 +38,7 @@ export class HomePage implements OnInit {
   ngOnInit() {
     this.emphasis = this.simulate.emphasis;
     this.bars = this.simulate.bars
+    this.lasts = this.simulate.last;
   }
 
   ionViewDidEnter() {
@@ -73,6 +77,10 @@ export class HomePage implements OnInit {
       .setContent("<center>Bar do militar </center>" + "</br>" + this.photoImg2)
       .addTo(this.map);
 
+  }
+
+  profile() {
+    this.router.navigateByUrl('profile');
   }
 }
 
