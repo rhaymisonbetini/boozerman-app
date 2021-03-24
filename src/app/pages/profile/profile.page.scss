@@ -36,14 +36,14 @@ ion-header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 200px;
+    height: 300px;
     background-image: linear-gradient(to bottom, transparent, white);
     .img {
         width: 90%;
-        height: 250px;
+        height: 300px;
         border-radius: 25px 8px 25px 8px;
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
-            rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        // box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+        //     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
         background: url("../../../assets/images/bar.jpg");
         background-repeat: no-repeat;
         background-size: 100% 100%;
